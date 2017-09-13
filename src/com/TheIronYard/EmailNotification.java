@@ -57,7 +57,8 @@ public class EmailNotification extends Notification {
     }
 
     @Override
-    public Object clone(){
-        return this.clone();
+    protected Object clone() {
+
+        return new EmailNotification(getCreatedAt(), getSubject(), getBody(), getRecipient(), getSmtpProvider() );
     }
 }

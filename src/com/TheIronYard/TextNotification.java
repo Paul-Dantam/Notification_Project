@@ -7,8 +7,6 @@ public class TextNotification extends Notification {
     private String recipient;
     private String smsProvider;
 
-
-
     @Override
     public void transport() throws NoTransportException {
         System.out.println(getRecipient());

@@ -2,7 +2,7 @@ package com.TheIronYard;
 
 import java.time.LocalDateTime;
 
-public class Notification {
+public abstract class Notification {
 
     private LocalDateTime createdAt;
     private String subject;
@@ -28,10 +28,7 @@ public class Notification {
         return body;
     }
 
-
-    public void transport() throws NoTransportException{
-
-    }
+    public abstract void transport() throws NoTransportException;
 
     protected void testText(){
         System.out.println("Check out this test text!");
