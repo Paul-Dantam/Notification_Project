@@ -11,8 +11,8 @@ public class TextNotification extends Notification {
 
     @Override
     public void transport() throws NoTransportException {
-        System.out.println(recipient);
-        System.out.println(smsProvider);
+        System.out.println(getRecipient());
+        System.out.println(getSmsProvider());
         System.out.println(getSubject());
         System.out.println(getBody());
         System.out.println(getCreatedAt());
@@ -22,6 +22,7 @@ public class TextNotification extends Notification {
         super(createdAt, subject, body);
         this.recipient = recipient;
         this.smsProvider = smsProvider;
+        testText();
     }
 
     public String getRecipient() {
